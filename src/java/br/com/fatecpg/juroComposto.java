@@ -58,9 +58,7 @@ public class juroComposto extends HttpServlet {
                            
             out.println("<center>");
            
-            out.println("<h1>");
-            out.println("<img src='Img/icon-fin-pb.jpg' width='30' height='30'/>");
-            
+            out.println("<h1>");         
             out.println("Juros Compostos");
             out.println("</h1>");
             
@@ -133,9 +131,7 @@ public class juroComposto extends HttpServlet {
             
             out.println("</Table>");
             out.println("</form>");
-            out.println("</fieldset>");
-                        
-            out.println("<br/><a href='home.html'><img src='Img/btn-vt.jpg'/></a>");
+            out.println("</fieldset>");         
                         
             out.println("</body>");
             out.println("</html>");
