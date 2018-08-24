@@ -98,15 +98,12 @@ public class juroComposto extends HttpServlet {
             out.println("<td>");
             out.println("<input type='number' name='n' maxlength='20' placeholder='ex:12'"+n+"'/>");
             out.println("</td>");
-            out.println("</tr>");
-            
-            
+            out.println("</tr>");           
             
             out.println("<tr>");
-            out.println("<td colspan='3' align=center>");
-            out.println("<p><input type='submit' value='Calcular'/>");
-            
-            
+            out.println("<td colspan='4' align=center>");
+            out.println("<p><input type='submit' value='Calcular'/><input type='button' value='Voltar' onclick=\"location.href='index.html'\"/>");
+
             out.println("</td>");
             out.println("</tr>");
             
