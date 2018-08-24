@@ -55,7 +55,7 @@ public class juroSimples extends HttpServlet {
                       out.println("</tr>");
                       
                       out.println("<tr>");
-             out.println("<td><input type='submit' value='Enviar'></td>"); 
+             out.println("<td><input type='submit' value='Enviar'><input type='button' value='Voltar' onclick=\"location.href='index.html'\"/></td>"); 
                       out.println("<tr>");
 
              out.println("</form>");
