@@ -62,7 +62,6 @@ public class juroSimples extends HttpServlet {
              out.println("</table>");
 
             out.println("<br><hr>");
-
           
              double c = Double.parseDouble(request.getParameter("c"));
              double i = Double.parseDouble(request.getParameter("i"));
@@ -74,15 +73,12 @@ public class juroSimples extends HttpServlet {
 
              DecimalFormat deci = new DecimalFormat("0.00");
 
-
             out.println("<h2 style='text-align:center'>"+"0 valor total de juros é: "+ deci.format(j)+"</h2>");
             out.println("<h2 style='text-align:center'>"+"0 valor do Montante é: "+ deci.format(m)+"</h2>");
             out.println("<form action='index.html'>");
             out.println("<input type='submit' value='Voltar' style='text-align:center'>");
             out.println("</form>");
-            
             out.println("</center>");
-
             out.println("</body>");
             out.println("</html>");
         }
