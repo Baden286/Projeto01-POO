@@ -45,15 +45,15 @@ public class juroSimples extends HttpServlet {
 
              out.println("<form>");
                       out.println("<tr>");
-             out.println("<td>Capital (R$):</td> "+"<td><input class='w-100' type='number' step='0.01' name='c' maxlength='20' placeholder='ex:2500,25'></td>"); 
+             out.println("<td>Capital (R$):</td> "+"<td><input class='w-100' type='number' step='0.01' name='c' maxlength='20' placeholder='Ex: 2500,25'></td>"); 
                       out.println("</tr>");
                      
                       out.println("<tr>");
-             out.println("<td>Taxa de Juros (%):</td> "+"<td><input class='w-100' type='number'  step='0.01' name='t' maxlength='20' placeholder='ex:15,5'></td>"); 
+             out.println("<td>Taxa de Juros (%):</td> "+"<td><input class='w-100' type='number'  step='0.01' name='t' maxlength='20' placeholder='Ex: 15,5'></td>"); 
                       out.println("</tr>");
                       
                       out.println("<tr>");
-             out.println("<td>Número de Períodos (Meses):</td> "+"<td><input class='w-100' type='number' name='i' maxlength='20' placeholder='ex:12'></td>");
+             out.println("<td>Número de Períodos (Meses):</td> "+"<td><input class='w-100' type='number' name='i' maxlength='20' placeholder='Ex: 12'></td>");
                       out.println("</tr>");
                       
                       out.println("</table>");
