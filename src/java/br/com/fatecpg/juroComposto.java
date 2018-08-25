@@ -113,24 +113,34 @@ public class juroComposto extends HttpServlet {
             out.println("</td>");
             out.println("</tr>");
             
-            out.println("<tr>");
+                out.println("<tr>");
             
-            
-            float cf = 0;
+            float auxc=0, auxjm=0, cf=0;
             cf = c;
+            auxc = c;
+            
+               
+                out.println("<td><b>MÊS</td>");
+                out.println("<td><b>APORTE</td>");
+                out.println("<td><b>JUROS MENSAL</td>");
+                out.println("<td><b>JUROS TOTAL</td>");
+                out.println("<td><b>ACUMULADO</td>");
+                out.println("</tr>");
             
             
             for(int i=1; i<=n; i++){
                 Float m = (c * (1 + (t / 100)));    
-                out.println("<tr>");
-                out.println("<td><b>Saldo da Parcela "+ i +" do Montante (R$): "+"</td>");
+               
+                out.println("<td><b>"+ i +"</td>");
+                out.println("<td align=right><b>"+ cm.format(auxc) +"</td>");
+                out.println("<td align=right><b>"+ cm.format(m-auxc - (auxjm))+"</td>");
+                out.println("<td align=right><b>"+ cm.format(m-auxc) +"</td>");
                 out.println("<td align=right><b>"+ cm.format(m) +"</td>");
                 c = m;
+                auxjm = m-auxc;
                 out.println("</tr>");
             }
            
-            
-            out.println("<td><b><br>Juros Composto Total do Período (R$): "+ cj.format(c - cf) +"</td>");
             
             out.println("</tr>");
             
