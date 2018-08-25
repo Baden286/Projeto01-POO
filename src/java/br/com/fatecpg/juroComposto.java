@@ -119,15 +119,16 @@ public class juroComposto extends HttpServlet {
             float cf = 0;
             cf = c;
             
+            
             for(int i=1; i<=n; i++){
                 Float m = (c * (1 + (t / 100)));    
                 out.println("<tr>");
                 out.println("<td><b>Saldo da Parcela "+ i +" do Montante (R$): "+"</td>");
-                out.println("<td><b>"+ cm.format(m) +"</td>");
+                out.println("<td align=right><b>"+ cm.format(m) +"</td>");
                 c = m;
                 out.println("</tr>");
             }
-          
+           
             
             out.println("<td><b><br>Juros Composto Total do Período (R$): "+ cj.format(c - cf) +"</td>");
             
