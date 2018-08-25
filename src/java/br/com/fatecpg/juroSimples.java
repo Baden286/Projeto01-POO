@@ -43,15 +43,15 @@ public class juroSimples extends HttpServlet {
 
              out.println("<form>");
                       out.println("<tr>");
-             out.println("<td>Digite o Capital</td> "+"<td><input type='text' size='60' name='c' placeholder='capital aplicado'></td>"); 
+             out.println("<td>Capital (R$):</td> "+"<td><input type='number' step='0.01' name='c' maxlength='20' placeholder='ex:2500,25'></td>"); 
                       out.println("</tr>");
                      
                       out.println("<tr>");
-             out.println("<td>Digite a taxa %</td> "+"<td><input type='text' size='60' name='i' placeholder='(ex. Para 2% digite 0.2)'></td>"); 
+             out.println("<td>Taxa de Juros (%):</td> "+"<td><input type='number'  step='0.01' name='t' maxlength='20' placeholder='ex:15,5'></td>"); 
                       out.println("</tr>");
                       
                       out.println("<tr>");
-             out.println("<td>Digite as Parcelas</td> "+"<td><input type='text' size='60' name='t' placeholder='Quantidade de meses'></td>");
+             out.println("<td>Número de Períodos (Meses):</td> "+"<td><input type='number' name='i' maxlength='20' placeholder='ex:12'></td>");
                       out.println("</tr>");
                       
                       out.println("<tr>");
@@ -65,13 +65,13 @@ public class juroSimples extends HttpServlet {
           
              double c = Double.parseDouble(request.getParameter("c"));
              double i = Double.parseDouble(request.getParameter("i"));
-             double t = Double.parseDouble(request.getParameter("t"));
+             float t = Float.parseFloat(request.getParameter("t"));
              double m,j; 
              
-             j=c*i*t;
+             j=(c*i*t)/100;
              m=j+c;
 
-             DecimalFormat deci = new DecimalFormat("0.00");
+             DecimalFormat deci = new DecimalFormat("#0.00");
 
             out.println("<h2 style='text-align:center'>"+"0 valor total de juros é: "+ deci.format(j)+"</h2>");
             out.println("<h2 style='text-align:center'>"+"0 valor do Montante é: "+ deci.format(m)+"</h2>");

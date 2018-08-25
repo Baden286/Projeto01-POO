@@ -37,6 +37,13 @@ public class juroComposto extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            
+            out.println("<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous'>");
+            out.println("<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script>");
+            out.println("<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous'></script>");
+            out.println("<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' crossorigin='anonymous'></script>");
+        
+
             out.println("<title>Servlet juroComposto</title>");            
             out.println("</head>");
             out.println("<body>");            
@@ -64,16 +71,15 @@ public class juroComposto extends HttpServlet {
             
             out.println("</center>");
             
-            out.println("<fieldset>");
+            out.println("<center>");
             out.println("<legend>Juros Compostos</legend>");
             out.println("<form>");
             
-            out.println("<p>");
             
-            out.println("<Table>");
+            out.println("<Table border='1'>");
                                 
             out.println("<tr>");
-            out.println("<td align=right>");
+            out.println("<td>");
             out.println("<label>Capital (R$):</label>");
             out.println("</td>");
             out.println("<td>");
@@ -82,7 +88,7 @@ public class juroComposto extends HttpServlet {
             out.println("</tr>");
             
             out.println("<tr>");
-            out.println("<td align=right>");
+            out.println("<td>");
             out.println("<label>Taxa de Juros (%):</label>");
             out.println("</td>");
             out.println("<td>");
@@ -92,7 +98,7 @@ public class juroComposto extends HttpServlet {
             out.println("</tr>");
             
             out.println("<tr>");
-            out.println("<td align=right>");
+            out.println("<td>");
             out.println("<label>Número de Períodos (Meses):</label>");
             out.println("</td>");
             out.println("<td>");
@@ -116,7 +122,8 @@ public class juroComposto extends HttpServlet {
             for(int i=1; i<=n; i++){
                 Float m = (c * (1 + (t / 100)));    
                 out.println("<tr>");
-                out.println("<td><b>Saldo da Parcela "+ i +" do Montante (R$): "+ cm.format(m) +"</td>");
+                out.println("<td><b>Saldo da Parcela "+ i +" do Montante (R$): "+"</td>");
+                out.println("<td><b>"+ cm.format(m) +"</td>");
                 c = m;
                 out.println("</tr>");
             }
@@ -128,7 +135,7 @@ public class juroComposto extends HttpServlet {
             
             out.println("</Table>");
             out.println("</form>");
-            out.println("</fieldset>");         
+            out.println("</center>");
                         
             out.println("</body>");
             out.println("</html>");
