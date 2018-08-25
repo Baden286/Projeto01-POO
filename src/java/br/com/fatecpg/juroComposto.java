@@ -76,38 +76,38 @@ public class juroComposto extends HttpServlet {
             out.println("<form>");
             
             
-            out.println("<Table border='1'>");
+            out.println("<Table style='width: 50%' border='3'>");
                                 
             out.println("<tr>");
             out.println("<td colspan='3'>");
-            out.println("<label>Capital (R$):</label>");
+            out.println("<label class='px-2' >Capital (R$):</label>");
             out.println("</td>");
             out.println("<td colspan='2'>");
-            out.println("<input type='number' step='0.01' name='c' maxlength='20' placeholder='ex:2500,25'"+c+"'/>");
+            out.println("<input class='w-100' type='number' step='0.01' name='c' maxlength='20' placeholder='ex:2500,25'"+c+"'/>");
             out.println("</td>");
             out.println("</tr>");
             
             out.println("<tr>");
             out.println("<td colspan='3'>");
-            out.println("<label>Taxa de Juros (%):</label>");
+            out.println("<label class='px-2'>Taxa de Juros (%):</label>");
             out.println("</td>");
             out.println("<td colspan='2'>");
-            out.println("<input type='number' step='0.01' name='t' maxlength='20' placeholder='ex:15,5'"+t+"'/>");
+            out.println("<input class='w-100' type='number' step='0.01' name='t' maxlength='20' placeholder='ex:15,5'"+t+"'/>");
             out.println("</td>");
             out.println("</tr>");
             
             out.println("<tr>");
             out.println("<td colspan='3'>");
-            out.println("<label>Número de Períodos (Meses):</label>");
+            out.println("<label class='px-2'>Número de Períodos (Meses):</label>");
             out.println("</td>");
             out.println("<td colspan='2'>");
-            out.println("<input type='number' name='n' maxlength='20' placeholder='ex:12'"+n+"'/>");
+            out.println("<input class='w-100' type='number' name='n' maxlength='20' placeholder='ex:12'"+n+"'/>");
             out.println("</td>");
             out.println("</tr>");           
             
             out.println("<tr>");
             out.println("<td colspan='5' align=center>");
-            out.println("<p><input type='submit' value='Calcular'/><input type='button' value='Voltar' onclick=\"location.href='index.html'\"/>");
+            out.println("<p><input class='btn btn-success font-weight-bold mr-5 mt-3' type='submit' value='Calcular'/><input class='btn btn-success font-weight-bold mt-3' type='button' value='Voltar' onclick=\"location.href='index.html'\"/>");
             out.println("</td>");
             out.println("</tr>");
             
@@ -117,7 +117,7 @@ public class juroComposto extends HttpServlet {
             cf = c;
             auxc = c;
             
-                out.println("<tr>");
+                out.println("<tr style='background-color: #cc9'>");
                 out.println("<td align=center><b>MÊS</td>");
                 out.println("<td align=center><b>APORTE</td>");
                 out.println("<td align=center><b>JUROS MENSAL</td>");
