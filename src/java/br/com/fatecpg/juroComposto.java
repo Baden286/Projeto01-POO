@@ -64,15 +64,15 @@ public class juroComposto extends HttpServlet {
                 }catch(Exception ex){}
                            
             out.println("<center>");
-           
-            out.println("<h1>");         
+            out.println("<br>");
+            out.println("<h3>");         
             out.println("Juros Compostos");
-            out.println("</h1>");
+            out.println("</h3>");
             
             out.println("</center>");
             
             out.println("<center>");
-            out.println("<legend>Juros Compostos</legend>");
+          
             out.println("<form>");
             
             
