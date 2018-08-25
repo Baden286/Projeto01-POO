@@ -79,63 +79,61 @@ public class juroComposto extends HttpServlet {
             out.println("<Table border='1'>");
                                 
             out.println("<tr>");
-            out.println("<td>");
+            out.println("<td colspan='3'>");
             out.println("<label>Capital (R$):</label>");
             out.println("</td>");
-            out.println("<td>");
+            out.println("<td colspan='2'>");
             out.println("<input type='number' step='0.01' name='c' maxlength='20' placeholder='ex:2500,25'"+c+"'/>");
             out.println("</td>");
             out.println("</tr>");
             
             out.println("<tr>");
-            out.println("<td>");
+            out.println("<td colspan='3'>");
             out.println("<label>Taxa de Juros (%):</label>");
             out.println("</td>");
-            out.println("<td>");
+            out.println("<td colspan='2'>");
             out.println("<input type='number' step='0.01' name='t' maxlength='20' placeholder='ex:15,5'"+t+"'/>");
-            
             out.println("</td>");
             out.println("</tr>");
             
             out.println("<tr>");
-            out.println("<td>");
+            out.println("<td colspan='3'>");
             out.println("<label>Número de Períodos (Meses):</label>");
             out.println("</td>");
-            out.println("<td>");
+            out.println("<td colspan='2'>");
             out.println("<input type='number' name='n' maxlength='20' placeholder='ex:12'"+n+"'/>");
             out.println("</td>");
             out.println("</tr>");           
             
             out.println("<tr>");
-            out.println("<td colspan='4' align=center>");
+            out.println("<td colspan='5' align=center>");
             out.println("<p><input type='submit' value='Calcular'/><input type='button' value='Voltar' onclick=\"location.href='index.html'\"/>");
-
             out.println("</td>");
             out.println("</tr>");
             
-                out.println("<tr>");
+                
             
             float auxc=0, auxjm=0, cf=0;
             cf = c;
             auxc = c;
             
-               
-                out.println("<td><b>MÊS</td>");
-                out.println("<td><b>APORTE</td>");
-                out.println("<td><b>JUROS MENSAL</td>");
-                out.println("<td><b>JUROS TOTAL</td>");
-                out.println("<td><b>ACUMULADO</td>");
+                out.println("<tr>");
+                out.println("<td align=center><b>MÊS</td>");
+                out.println("<td align=center><b>APORTE</td>");
+                out.println("<td align=center><b>JUROS MENSAL</td>");
+                out.println("<td align=center><b>JUROS TOTAL</td>");
+                out.println("<td align=center><b>ACUMULADO</td>");
                 out.println("</tr>");
             
             
             for(int i=1; i<=n; i++){
                 Float m = (c * (1 + (t / 100)));    
                
-                out.println("<td><b>"+ i +"</td>");
-                out.println("<td align=right><b>"+ cm.format(auxc) +"</td>");
-                out.println("<td align=right><b>"+ cm.format(m-auxc - (auxjm))+"</td>");
-                out.println("<td align=right><b>"+ cm.format(m-auxc) +"</td>");
-                out.println("<td align=right><b>"+ cm.format(m) +"</td>");
+                out.println("<td align=center>"+ i +"</td>");
+                out.println("<td align=right>"+ cm.format(auxc) +"</td>");
+                out.println("<td align=right>"+ cm.format(m-auxc - (auxjm))+"</td>");
+                out.println("<td align=right>"+ cm.format(m-auxc) +"</td>");
+                out.println("<td align=right>"+ cm.format(m) +"</td>");
                 c = m;
                 auxjm = m-auxc;
                 out.println("</tr>");
